@@ -10,9 +10,13 @@ const AuthController = {
 
     showHome: (req,res) => {
         res.render('index');
+    },
+    login: (req,res) => {
+        let email = req.body.email;
+        let password = req.body.password;
+        console.log(email);
+        res.redirect("home");
     }
-
-
 }
 
 module.exports = AuthController;
